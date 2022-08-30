@@ -1,5 +1,5 @@
 # OfflineR2T
-OfflineR2T (Offline Read to Tree) is a tool for the Marshall Lab to automate the read pair to phylogenetic tree pipeline through slurm.
+OfflineR2T (Offline Reads to Tree) is a tool for the Marshall Lab to automate the read pair to phylogenetic tree pipeline through slurm.
 
 Inputs:
 
