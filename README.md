@@ -1,6 +1,7 @@
 OfflineR2T-v.2 (Offline Reads to Tree Version 2) is a tool for the Marshall Lab to automate the read pair to phylogenetic tree pipeline through slurm + pangenome creation functionality.
 
 Usage:
+
 -r1: filepath to read pair one
 
 -r2: filepath to read pair two
