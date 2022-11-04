@@ -29,7 +29,7 @@ Pipeline Details (in order):
 5. Gtdbtk - hardcoded: classify_wf | --cpus 32
 6. assembly_summary.txt & references folder usage
 7. GToTree - hardcoded: -t -L Species,Strain | -T IQ-TREE | -j 16
-8. (Optional) Roary - hardcoded: | -e | --mafft | -p 8
+8. Roary - hardcoded: | -e | --mafft | -p 8
 
 Script Details:
 
