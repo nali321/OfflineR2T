@@ -29,9 +29,6 @@ parser.add_argument("-lt", "--little_tree", type=int,
 parser.add_argument("-pg", "--pangenome_size", type=int,
                     help="Maximum size of the pangenome")
 
-parser.add_argument("-cp", "--conda_profile", type=str,
-                    help="Filepath to conda profile")
-
 parser.add_argument("-o", "--outdir", type=str,
                     help="Directory where output will go")
 
@@ -67,8 +64,6 @@ if args.pangenome_size is None:
     pangenome_size = None
 else:
     pangenome_size = args.pangenome_size
-
-conda_profile = args.conda_profile
 
 #if output directory already exists, send error message
 path = args.outdir
