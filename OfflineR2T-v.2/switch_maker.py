@@ -1,5 +1,5 @@
 #make prokka switch
-def prokka_switch(switches, outdir, spades, conda_profile):
+def prokka_switch(switches, outdir, spades):
     f = open(f"{switches}/prokka.sh", "w+")
 
     #shebang statement
@@ -20,7 +20,7 @@ def prokka_switch(switches, outdir, spades, conda_profile):
 
     f.write("conda deactivate")
 
-def gtdbtk_switch(switches, outdir, genome_dir, conda_profile):
+def gtdbtk_switch(switches, outdir, genome_dir):
     f = open(f"{switches}/gtdbtk.sh", "w+")
 
     #shebang statement
@@ -43,7 +43,7 @@ def gtdbtk_switch(switches, outdir, genome_dir, conda_profile):
 
 #make gtotree switch
 #path: to text files
-def gtotree_switch(path, dir1, switches, outdir, h_flag, type, conda_profile):
+def gtotree_switch(path, dir1, switches, outdir, h_flag, type):
     f = open(f"{switches}/{type}_gtotree.sh", "w+")
 
     #shebang statement
@@ -69,7 +69,7 @@ def gtotree_switch(path, dir1, switches, outdir, h_flag, type, conda_profile):
     f.write("conda deactivate")
 
 #make prokka switch for running on pangenome gff files
-def pan_prokka_switch(switches, name, path, outdir, conda_profile):
+def pan_prokka_switch(switches, name, path, outdir):
     f = open(f"{switches}/{name}_prokka.sh", "w+")
 
     #shebang statement
@@ -91,7 +91,7 @@ def pan_prokka_switch(switches, name, path, outdir, conda_profile):
     f.write("conda deactivate")
 
 #make prokka switch for running on pangenome gff files
-def roary_switch(switches, path, outdir, conda_profile):
+def roary_switch(switches, path, outdir):
     f = open(f"{switches}/roary.sh", "w+")
 
     #shebang statement
