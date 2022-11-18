@@ -171,7 +171,7 @@ os.system(f"cp {spades}/contigs.fasta {isolate}")
 big_gtotree = os.path.join(path, "big_gtotree").replace("\\", "/")
 
 #use gtotree switch
-switch_maker.gtotree_switch(path, big_gtotree_text_files, switches, big_gtotree, h_flag, "big", None)
+switch_maker.gtotree_switch(path, big_gtotree_text_files, switches, big_gtotree, h_flag, "big")
 os.system(f"bash {switches}/big_gtotree.sh")
 
 #BIG TREE MADE  
@@ -225,7 +225,7 @@ gtotree_text.map_id(little_gtotree_text_files, little_leaves)
 little_gtotree = os.path.join(path, "little_gtotree").replace("\\", "/")
 
 #use gtotree switch
-switch_maker.gtotree_switch(path, little_gtotree_text_files, switches, little_gtotree, h_flag, "little", None)
+switch_maker.gtotree_switch(path, little_gtotree_text_files, switches, little_gtotree, h_flag, "little")
 os.system(f"bash {switches}/little_gtotree.sh")
 
 #LITTLE TREE MADE
@@ -265,7 +265,7 @@ if pangenome_size != None:
     for x in fasta_genomes:
         name = os.path.basename(x)
         name_dir = os.path.join(pan_prokka_dir, name).replace("\\", "/")
-        switch_maker.pan_prokka_switch(switches, name, x, name_dir, None)
+        switch_maker.pan_prokka_switch(switches, name, x, name_dir)
         os.system(f"bash {switches}/{name}_prokka.sh")
 
     #create gffs folder
@@ -285,5 +285,5 @@ if pangenome_size != None:
 
     #run roary on the gffs folder
     #roary -e --mafft -p *.gff
-    switch_maker.roary_switch(switches, gffs, roary_dir, None)
+    switch_maker.roary_switch(switches, gffs, roary_dir)
     os.system(f"bash {switches}/roary.sh")
